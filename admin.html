@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f6f4ec" />
+    <title>หลังบ้านร้านค้า — Everyday Goods</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Thai:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="admin-body">
+    <header class="admin-topbar">
+      <a class="brand" href="./" aria-label="กลับหน้าร้าน">
+        <span class="brand-mark">e.</span>
+        <span>everyday<span class="brand-light">goods</span></span>
+      </a>
+      <span class="admin-label">STORE ADMIN / หลังบ้าน</span>
+      <button id="signOutButton" class="quiet-button" type="button" hidden>ออกจากระบบ</button>
+    </header>
+
+    <main class="admin-main">
+      <section id="loginPanel" class="login-panel">
+        <p class="eyebrow">PRIVATE AREA</p>
+        <h1>เข้าสู่ระบบแอดมิน</h1>
+        <p>ใช้บัญชีแอดมินที่สร้างไว้ใน Supabase เพื่อดูคำสั่งซื้อและตรวจสอบสลิป</p>
+        <form id="loginForm">
+          <label>อีเมล
+            <input type="email" name="email" autocomplete="username" required />
+          </label>
+          <label>รหัสผ่าน
+            <input type="password" name="password" autocomplete="current-password" required />
+          </label>
+          <button class="primary-button" type="submit">เข้าสู่ระบบ</button>
+        </form>
+        <p id="loginMessage" class="admin-message" role="status"></p>
+      </section>
+
+      <section id="dashboard" hidden>
+        <div class="dashboard-heading">
+          <div><p class="eyebrow">ORDER MANAGEMENT</p><h1>รายการสั่งจอง</h1></div>
+          <button id="refreshButton" class="outline-button" type="button">↻ โหลดรายการใหม่</button>
+        </div>
+        <p id="dashboardMessage" class="admin-message" role="status"></p>
+
+        <div class="stats-grid">
+          <article><span>รายการทั้งหมด</span><strong id="totalOrders">0</strong></article>
+          <article><span>รอตรวจสลิป</span><strong id="waitingOrders">0</strong></article>
+          <article><span>ยืนยันรับเงินแล้ว</span><strong id="paidOrders">0</strong></article>
+        </div>
+
+        <section class="settings-card">
+          <div class="card-heading"><div><p class="eyebrow">STORE SETTINGS</p><h2>ตั้งค่าหน้าร้าน</h2></div></div>
+          <div class="settings-grid">
+            <form id="qrSettingsForm" class="settings-form">
+              <label>QR สำหรับรับชำระ
+                <input id="storeQrUpload" type="file" accept="image/png,image/jpeg,image/webp" />
+              </label>
+              <p class="settings-hint">ภาพ PNG, JPG หรือ WEBP ขนาดไม่เกิน 5 MB</p>
+              <button class="outline-button" type="submit">บันทึก QR</button>
+            </form>
+            <form id="pickupSettingsForm" class="settings-form">
+              <label>รายละเอียดจุดรับสินค้า
+                <textarea id="pickupInstructionsInput" rows="3" maxlength="500" required></textarea>
+              </label>
+              <button class="outline-button" type="submit">บันทึกจุดรับ</button>
+            </form>
+          </div>
+        </section>
+
+        <section class="orders-section">
+          <div class="orders-heading">
+            <h2>คำสั่งซื้อ</h2>
+            <label class="filter-label">สถานะ
+              <select id="statusFilter">
+                <option value="all">ทั้งหมด</option>
+                <option value="awaiting_review">รอตรวจสลิป</option>
+                <option value="paid">จ่ายแล้ว</option>
+                <option value="rejected">สลิปไม่ผ่าน</option>
+              </select>
+            </label>
+          </div>
+          <div class="table-container">
+            <table class="orders-table">
+              <thead>
+                <tr>
+                  <th>เวลา / รายการ</th>
+                  <th>ลูกค้า / สินค้า</th>
+                  <th>รับสินค้า</th>
+                  <th>ยอดชำระ</th>
+                  <th>สลิป</th>
+                  <th>สถานะชำระ</th>
+                </tr>
+              </thead>
+              <tbody id="orderRows"></tbody>
+            </table>
+          </div>
+          <p id="emptyOrders" class="empty-state" hidden>ยังไม่มีรายการในสถานะนี้</p>
+        </section>
+      </section>
+    </main>
+    <script type="module" src="./src/admin.js"></script>
+  </body>
+</html>

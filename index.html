@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f6f4ec" />
+    <meta
+      name="description"
+      content="สั่งจองเสื้อ Everyday Tee เลือกสีและไซซ์ที่ชอบ พร้อมชำระเงินด้วย QR"
+    />
+    <title>Everyday Tee — เปิดจองแล้ว</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Thai:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Everyday Tee หน้าแรก">
+        <span class="brand-mark">e.</span>
+        <span>everyday<span class="brand-light">goods</span></span>
+      </a>
+      <div class="topbar-note"><span class="live-dot"></span> PRE-ORDER · รอบที่ 01</div>
+      <a class="topbar-link" href="#order">จองเสื้อ <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow"><span>01</span> YOUR NEW EVERYDAY FAVORITE</p>
+          <h1>ใส่สบาย<br />ได้<span class="serif-word">ทุกวัน</span></h1>
+          <p class="hero-description">
+            เสื้อยืดทรงพอดีตัว เนื้อผ้านุ่ม ใส่แล้วไม่อยากถอด<br class="desktop-break" />
+            เลือกสีที่ใช่ แล้วจองตัวโปรดของคุณได้เลย
+          </p>
+          <a class="text-link" href="#order">เลือกเสื้อของฉัน <span aria-hidden="true">↓</span></a>
+          <div class="hero-stats">
+            <div><strong>ผ้า Cotton 100%</strong><span>นุ่ม ระบายอากาศดี</span></div>
+            <div><strong>390<span class="baht">฿</span></strong><span>ราคาพิเศษรอบจอง</span></div>
+            <div><strong>ส่งฟรี</strong><span>เมื่อสั่ง 2 ตัวขึ้นไป</span></div>
+          </div>
+        </div>
+        <div class="product-stage">
+          <div class="stage-label"><span>THE EVERYDAY TEE</span><span>01 / 03</span></div>
+          <div class="sun-disc"></div>
+          <div class="tee-scene" id="teeScene" data-color="cream">
+            <svg class="tee-art" viewBox="0 0 430 440" role="img" aria-label="ภาพเสื้อยืด Everyday Tee">
+              <defs>
+                <filter id="teeShadow" x="-35%" y="-25%" width="170%" height="175%">
+                  <feGaussianBlur in="SourceAlpha" stdDeviation="13" />
+                  <feOffset dx="0" dy="15" result="offsetblur" />
+                  <feComponentTransfer><feFuncA type="linear" slope="0.22" /></feComponentTransfer>
+                  <feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge>
+                </filter>
+                <linearGradient id="fabric" x1="0" x2="1" y1="0" y2="1">
+                  <stop offset="0" stop-color="#fffdf6" stop-opacity=".8" />
+                  <stop offset=".48" stop-color="#fff" stop-opacity=".04" />
+                  <stop offset="1" stop-color="#756b50" stop-opacity=".15" />
+                </linearGradient>
+              </defs>
+              <g filter="url(#teeShadow)">
+                <path class="tee-fill" d="M142 49 95 65 34 104l39 82 48-25v216h188V161l48 25 39-82-61-39-47-16c-6 28-29 44-53 44s-47-16-53-44Z" />
+                <path d="M142 49c6 28 29 44 53 44s47-16 53-44" fill="none" stroke="rgba(64,58,43,.23)" stroke-width="5" />
+                <path d="m122 161-1 214m188-214 1 214M81 109l28 61m240-61-28 61" fill="none" stroke="rgba(64,58,43,.12)" stroke-width="2" />
+                <path d="M137 381h160" fill="none" stroke="rgba(64,58,43,.16)" stroke-width="2" />
+                <path d="M122 161 34 104m362 0-88 57" fill="none" stroke="rgba(255,255,255,.25)" stroke-width="2" />
+                <path d="M145 51c4 21 21 37 39 42" fill="none" stroke="url(#fabric)" stroke-width="8" />
+              </g>
+              <text x="215" y="221" text-anchor="middle" class="tee-logo">everyday</text>
+              <text x="215" y="239" text-anchor="middle" class="tee-sublogo">GO SLOW, FEEL GOOD</text>
+            </svg>
+          </div>
+          <div class="stage-caption"><span>01 — EVERYDAY TEE</span><span>SOFT COTTON · MADE TO LIVE IN</span></div>
+          <span class="stage-index">E / 01</span>
+        </div>
+      </section>
+
+      <section class="order-section" id="order">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow"><span>02</span> MAKE IT YOURS</p>
+            <h2>เลือกตัวที่ใช่</h2>
+          </div>
+          <p>เปิดจองแล้ว · เลือกจัดส่งหรือรับเอง</p>
+        </div>
+
+        <div class="order-layout">
+          <form id="orderForm" class="order-form">
+            <fieldset class="choice-block">
+              <legend><span class="step-number">01</span> เลือกสี <span class="field-hint" id="colorLabel">ครีม</span></legend>
+              <div class="color-options">
+                <label class="color-choice">
+                  <input type="radio" name="color" value="cream" data-label="ครีม" checked />
+                  <span class="swatch swatch-cream"></span><span>ครีม</span>
+                </label>
+                <label class="color-choice">
+                  <input type="radio" name="color" value="forest" data-label="เขียวเข้ม" />
+                  <span class="swatch swatch-forest"></span><span>เขียวเข้ม</span>
+                </label>
+                <label class="color-choice">
+                  <input type="radio" name="color" value="terracotta" data-label="อิฐ" />
+                  <span class="swatch swatch-terracotta"></span><span>อิฐ</span>
+                </label>
+                <label class="color-choice">
+                  <input type="radio" name="color" value="ink" data-label="ดำ" />
+                  <span class="swatch swatch-ink"></span><span>ดำ</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset class="choice-block">
+              <legend><span class="step-number">02</span> เลือกไซซ์ <button class="size-guide-link" type="button" id="sizeGuideButton">ดูตารางไซซ์ ↗</button></legend>
+              <div class="size-options">
+                <label><input type="radio" name="size" value="S" /><span>S</span></label>
+                <label><input type="radio" name="size" value="M" checked /><span>M</span></label>
+                <label><input type="radio" name="size" value="L" /><span>L</span></label>
+                <label><input type="radio" name="size" value="XL" /><span>XL</span></label>
+                <label><input type="radio" name="size" value="2XL" /><span>2XL</span></label>
+              </div>
+              <p class="fit-note">ทรง Unisex · ถ้าชอบใส่หลวม แนะนำเพิ่ม 1 ไซซ์</p>
+            </fieldset>
+
+            <fieldset class="choice-block">
+              <legend><span class="step-number">03</span> จำนวน</legend>
+              <div class="quantity-control">
+                <button type="button" id="decreaseQuantity" aria-label="ลดจำนวน">−</button>
+                <output id="quantity" aria-live="polite">1</output>
+                <button type="button" id="increaseQuantity" aria-label="เพิ่มจำนวน">+</button>
+                <span>ตัว</span>
+              </div>
+            </fieldset>
+
+            <div class="customer-fields">
+              <p class="form-heading"><span class="step-number">04</span> ข้อมูลผู้สั่ง</p>
+              <label class="input-label">ชื่อผู้รับ
+                <input type="text" name="customerName" placeholder="ชื่อ - นามสกุล" autocomplete="name" required />
+              </label>
+              <label class="input-label">เบอร์โทรศัพท์
+                <input type="tel" name="phone" placeholder="0812345678 (ตัวเลข 9-10 หลัก)" autocomplete="tel" inputmode="numeric" pattern="[0-9]{9,10}" required />
+              </label>
+              <fieldset class="fulfillment-options">
+                <legend>เลือกรับสินค้า</legend>
+                <label><input type="radio" name="fulfillment" value="delivery" checked /><span>จัดส่ง</span></label>
+                <label><input type="radio" name="fulfillment" value="pickup" /><span>มารับเอง</span></label>
+              </fieldset>
+              <label class="input-label" id="addressField">ที่อยู่จัดส่ง
+                <textarea name="address" placeholder="บ้านเลขที่ ถนน ตำบล/แขวง อำเภอ/เขต จังหวัด และรหัสไปรษณีย์" autocomplete="street-address" rows="3" required></textarea>
+              </label>
+              <p class="pickup-instructions" id="pickupInstructions" hidden></p>
+            </div>
+
+            <div class="order-total">
+              <div><span>รวมทั้งหมด</span><small id="shippingNote">ยังไม่รวมค่าจัดส่ง 40 ฿</small></div>
+              <strong><span id="totalPrice">390</span><span> ฿</span></strong>
+            </div>
+            <button type="submit" class="submit-button">ยืนยันการจอง <span aria-hidden="true">↗</span></button>
+            <p class="privacy-note" id="orderMessage" role="status">กำลังเชื่อมต่อระบบสั่งจอง…</p>
+          </form>
+
+          <aside class="payment-card">
+            <div class="payment-topline"><span>PAYMENT</span><span>TH / PromptPay</span></div>
+            <h3>สแกนเพื่อชำระเงิน</h3>
+            <p class="payment-copy">สแกน QR ของร้าน แล้วแนบสลิปโอนเงิน<br />แอดมินจะตรวจสอบและอัปเดตสถานะให้</p>
+            <div class="qr-frame">
+              <img id="qrImage" alt="QR สำหรับชำระเงิน" hidden />
+              <div id="qrPlaceholder" class="qr-placeholder">
+                <div class="qr-placeholder-icon" aria-hidden="true">
+                  <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                </div>
+                <span>เพิ่ม QR รับเงินของร้าน</span>
+              </div>
+            </div>
+            <label class="input-label slip-field" for="paymentSlip">แนบสลิปโอนเงิน <span>PNG / JPG / WEBP · ไม่เกิน 5 MB</span>
+              <input id="paymentSlip" name="paymentSlip" type="file" accept="image/png,image/jpeg,image/webp" required />
+            </label>
+            <p class="qr-hint" id="paymentMessage">กรุณาแนบสลิปเพื่อส่งคำสั่งจองให้ร้านตรวจสอบ</p>
+            <div class="payment-amount"><span>ยอดชำระ</span><strong><span id="paymentTotal">390</span> ฿</strong></div>
+            <div class="payment-footer"><span>EVERYDAY GOODS</span><span>THANK YOU ♡</span></div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="bottom-note">
+        <span>GOOD THINGS, EVERY DAY.</span>
+        <p>ขอบคุณที่สนับสนุนแบรนด์เล็ก ๆ ของเรา ♡</p>
+      </section>
+    </main>
+
+    <dialog id="sizeDialog" class="size-dialog">
+      <div class="dialog-heading"><div><p class="eyebrow">SIZE GUIDE</p><h2>เลือกไซซ์ให้พอดี</h2></div><button type="button" class="dialog-close" aria-label="ปิด">×</button></div>
+      <p class="table-note">ขนาดวัดจากเสื้อ หน่วยเป็นนิ้ว · อาจคลาดเคลื่อน ± 0.5 นิ้ว</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>ไซซ์</th><th>รอบอก</th><th>ความยาว</th><th>ไหล่</th></tr></thead>
+          <tbody><tr><th>S</th><td>36</td><td>26</td><td>16</td></tr><tr><th>M</th><td>40</td><td>27</td><td>17.5</td></tr><tr><th>L</th><td>44</td><td>28</td><td>19</td></tr><tr><th>XL</th><td>48</td><td>29</td><td>20.5</td></tr><tr><th>2XL</th><td>52</td><td>30</td><td>22</td></tr></tbody>
+        </table>
+      </div>
+      <button type="button" class="dialog-done">เลือกไซซ์ของฉัน</button>
+    </dialog>
+
+    <dialog id="confirmationDialog" class="confirmation-dialog">
+      <button type="button" class="dialog-close" aria-label="ปิด">×</button>
+      <p class="eyebrow">ORDER SUMMARY</p>
+      <div class="confirm-icon">✓</div>
+      <h2>สรุปรายการจอง</h2>
+      <p id="confirmationText"></p>
+      <p class="confirmation-payment">ส่งรายการให้ร้านแล้ว สถานะชำระเงินกำลังรอตรวจสอบสลิป</p>
+      <button type="button" class="dialog-done">เรียบร้อย</button>
+    </dialog>
+
+    <footer><span>© 2026 EVERYDAY GOODS</span><span>MADE WITH CARE IN THAILAND</span><a href="./admin.html">จัดการร้าน</a></footer>
+    <script type="module" src="./src/customer.js"></script>
+  </body>
+</html>

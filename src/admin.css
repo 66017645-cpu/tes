@@ -1,0 +1,69 @@
+.admin-body { min-height: 100vh; background: #f6f4ec; }
+.admin-topbar { height: 74px; padding: 0 7.3%; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #dfded3; }
+.admin-label { color: #85877a; font-size: 9px; letter-spacing: 1.35px; }
+.quiet-button, .outline-button { padding: 10px 13px; border: 1px solid #c9c9bc; background: transparent; color: #24261e; font-size: 10px; cursor: pointer; }
+.quiet-button:hover, .outline-button:hover { border-color: #214e3c; color: #214e3c; }
+.admin-main { max-width: 1240px; min-height: calc(100vh - 74px); margin: 0 auto; padding: 55px 28px 80px; }
+.login-panel { width: min(430px, 100%); margin: 40px auto; padding: 34px; border: 1px solid #dfded3; background: #fbfaf6; }
+.login-panel h1, .dashboard-heading h1 { margin: 9px 0; font-size: 28px; letter-spacing: -.8px; }
+.login-panel > p:not(.eyebrow) { color: #77786e; font-size: 11px; line-height: 1.8; }
+.login-panel form, .settings-form { display: flex; flex-direction: column; gap: 13px; }
+.login-panel label, .settings-form label, .filter-label { display: flex; flex-direction: column; gap: 7px; color: #67685f; font-size: 10px; }
+.login-panel input, .settings-form input[type="file"], .settings-form textarea, .filter-label select { width: 100%; border: 1px solid #deddd3; background: transparent; color: #24261e; padding: 11px; outline: none; font: inherit; font-size: 11px; }
+.login-panel input:focus, .settings-form textarea:focus, .filter-label select:focus { border-color: #718874; }
+.primary-button { min-height: 43px; border: 0; background: #214e3c; color: white; font-size: 11px; cursor: pointer; }
+.primary-button:disabled, .save-status-button:disabled { opacity: .55; cursor: wait; }
+.admin-message { min-height: 16px; color: #71806d; font-size: 10px; line-height: 1.6; }
+.dashboard-heading { display: flex; align-items: end; justify-content: space-between; gap: 16px; }
+.dashboard-heading h1 { font-family: "IBM Plex Sans Thai", sans-serif; font-size: 32px; }
+.stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 13px; margin: 22px 0 29px; }
+.stats-grid article { min-height: 96px; padding: 18px; display: flex; flex-direction: column; justify-content: space-between; border: 1px solid #dfded3; background: #fbfaf6; }
+.stats-grid span { color: #7d7e74; font-size: 10px; }
+.stats-grid strong { color: #214e3c; font-size: 24px; font-weight: 600; }
+.settings-card { padding: 22px; border: 1px solid #dfded3; background: #fbfaf6; }
+.card-heading { margin-bottom: 20px; }
+.card-heading h2, .orders-heading h2 { margin: 5px 0 0; font-size: 17px; }
+.settings-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; }
+.settings-form textarea { resize: vertical; }
+.settings-hint { margin: -7px 0 0; color: #929287; font-size: 9px; }
+.settings-form .outline-button { align-self: flex-start; }
+.orders-section { margin-top: 37px; }
+.orders-heading { display: flex; align-items: end; justify-content: space-between; margin-bottom: 15px; }
+.filter-label { flex-direction: row; align-items: center; gap: 8px; }
+.filter-label select { min-width: 135px; padding: 8px; }
+.table-container { overflow-x: auto; border: 1px solid #dfded3; background: #fbfaf6; }
+.orders-table { width: 100%; border-collapse: collapse; text-align: left; font-size: 10px; }
+.orders-table th, .orders-table td { min-width: 106px; padding: 13px 12px; border-bottom: 1px solid #e8e7df; vertical-align: top; }
+.orders-table th { background: #f0efe7; color: #77786e; font-size: 9px; font-weight: 500; white-space: nowrap; }
+.orders-table th:first-child { min-width: 135px; }
+.orders-table td:nth-child(2) { min-width: 155px; }
+.orders-table td:nth-child(3) { min-width: 170px; }
+.orders-table td:last-child { min-width: 200px; }
+.order-time, .order-id, .customer-phone, .customer-item, .address-text { display: block; }
+.order-time, .customer-phone, .address-text { color: #85867c; font-size: 9px; line-height: 1.7; }
+.order-id { margin-top: 3px; color: #a0a092; font-size: 8px; }
+.customer-name { display: block; margin-bottom: 2px; font-size: 11px; }
+.customer-item { margin-top: 3px; color: #65675e; }
+.total-cell { color: #214e3c; font-size: 12px; font-weight: 600; white-space: nowrap; }
+.slip-button { padding: 7px 9px; border: 1px solid #b9c3b4; background: transparent; color: #214e3c; font-size: 9px; cursor: pointer; white-space: nowrap; }
+.status-editor { display: flex; align-items: center; gap: 6px; }
+.status-editor select { min-width: 105px; padding: 7px; border: 1px solid #deddd3; background: #fbfaf6; color: #24261e; font: inherit; font-size: 9px; }
+.save-status-button { padding: 7px 9px; border: 0; background: #214e3c; color: #fff; font-size: 9px; cursor: pointer; }
+.empty-state { padding: 28px; color: #85867c; text-align: center; font-size: 11px; }
+
+@media (max-width: 700px) {
+  .admin-topbar { height: 62px; padding: 0 5%; }
+  .admin-label { font-size: 7px; letter-spacing: .8px; }
+  .admin-main { padding: 34px 5% 55px; }
+  .login-panel { margin: 12px auto; padding: 24px; }
+  .dashboard-heading { align-items: start; }
+  .dashboard-heading h1 { font-size: 26px; }
+  .dashboard-heading .outline-button { padding: 8px; font-size: 9px; }
+  .stats-grid { gap: 7px; }
+  .stats-grid article { min-height: 82px; padding: 11px; }
+  .stats-grid span { font-size: 8px; line-height: 1.5; }
+  .stats-grid strong { font-size: 20px; }
+  .settings-card { padding: 17px; }
+  .settings-grid { grid-template-columns: 1fr; gap: 22px; }
+  .orders-heading { align-items: center; }
+}
